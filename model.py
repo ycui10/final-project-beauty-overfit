@@ -1,7 +1,6 @@
 import tensorflow as tf
 import numpy as np
 import image
-from datetime import datetime
 from tensorflow import keras
 import color_transfer
                   
