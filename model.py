@@ -11,13 +11,6 @@ num_content_layers = len(content_layers)
 num_style_layers = len(style_layers)
 
 def model_init(algorithm):
-    """
-    this function will load pretrained(imagenet) vgg19 model and give access to output of intermedia layer
-    then it will initialize a new model which take a picture as a input and output a list of vgg19 layer output.
-    
-    Return:
-    return a model that input a picture and output the content feature and style feature
-    """
     
     vgg19 = tf.keras.applications.VGG19(include_top = False, weights = 'imagenet')
     vgg19.trainable = False
