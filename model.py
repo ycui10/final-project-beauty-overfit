@@ -274,7 +274,6 @@ def run(content_path, style_path, algorithm, mode, color, artist, iteration):
     best_loss = float('inf')
 
     for i in range(iteration):
-
         grads, all_loss = compute_gradients(cfg)
         total_losss, content_losss, style_losss = all_loss
         optimizer.apply_gradients([(grads, gen_image)])
